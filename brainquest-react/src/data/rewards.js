@@ -1,0 +1,18 @@
+export const ALL_BADGES = [
+  { id:'first_win', name:'First Win', icon:'🌟', check: (s) => s.totalLevels >= 1 },
+  { id:'puzzle5', name:'Puzzle Fan', icon:'🧩', check: (s) => s.levels.puzzle >= 6 },
+  { id:'math5', name:'Math Wizard', icon:'🔢', check: (s) => s.levels.math >= 6 },
+  { id:'draw5', name:'Color Artist', icon:'🎨', check: (s) => s.levels.draw >= 6 },
+  { id:'sci5', name:'Scientist', icon:'🔬', check: (s) => s.levels.science >= 6 },
+  { id:'streak3', name:'3 Day Streak', icon:'🔥', check: (s) => s.streak >= 3 },
+  { id:'xp100', name:'XP Hunter', icon:'⭐', check: (s) => s.xp >= 100 },
+  { id:'xp500', name:'XP Master', icon:'💎', check: (s) => s.xp >= 500 },
+  { id:'lvl10', name:'Level 10', icon:'🏅', check: (s) => Math.max(s.levels.puzzle, s.levels.math, s.levels.draw, s.levels.science) >= 10 },
+  { id:'lvl25', name:'Level 25', icon:'🥇', check: (s) => Math.max(s.levels.puzzle, s.levels.math, s.levels.draw, s.levels.science) >= 25 },
+  { id:'lvl50', name:'Halfway Hero', icon:'🏆', check: (s) => Math.max(s.levels.puzzle, s.levels.math, s.levels.draw, s.levels.science) >= 50 },
+  { id:'lvl100', name:'Legend!', icon:'👑', check: (s) => Math.max(s.levels.puzzle, s.levels.math, s.levels.draw, s.levels.science) >= 100 },
+  { id:'allgames', name:'All Rounder', icon:'🌈', check: (s) => s.levels.puzzle >= 2 && s.levels.math >= 2 && s.levels.draw >= 2 && s.levels.science >= 2 },
+  { id:'quest', name:'Daily Hero', icon:'🎯', check: (s) => Object.values(s.questDone).every(Boolean) },
+  { id:'xp1000', name:'XP King', icon:'🌟', check: (s) => s.xp >= 1000 },
+  { id:'lvl75', name:'Almost Legend', icon:'⚡', check: (s) => Math.max(s.levels.puzzle, s.levels.math, s.levels.draw, s.levels.science) >= 75 },
+];
